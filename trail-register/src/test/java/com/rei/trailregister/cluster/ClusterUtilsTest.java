@@ -16,10 +16,10 @@ public class ClusterUtilsTest {
     public void canParsePeers() {
         List<HostAndPort> peers = parseHostAndPorts(ImmutableMap.of(PEERS_SEE_OTHER_VAR, "OTHER", "OTHER", "hosta[4567],hostb:123"));
         assertEquals(2, peers.size());
-        assertEquals("hosta", peers.get(0).getHostText());
+        assertEquals("hosta", peers.get(0).getHost());
         assertEquals(4567, peers.get(0).getPort());
         
-        assertEquals("hostb", peers.get(1).getHostText());
+        assertEquals("hostb", peers.get(1).getHost());
         assertEquals(123, peers.get(1).getPort());
     }
 

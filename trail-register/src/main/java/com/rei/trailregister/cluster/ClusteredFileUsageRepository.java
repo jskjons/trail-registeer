@@ -127,7 +127,7 @@ public class ClusteredFileUsageRepository implements UsageRepository {
     	}
     	
     	private String getBaseUrl() {
-    		return "http://" + host.getHostText() + ":" + host.getPort();
+    		return "http://" + host.getHost() + ":" + host.getPort();
     	}
     	
     	@Override
